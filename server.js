@@ -6,7 +6,7 @@ app.use(express.json());
 
 
 app.get("/users", (req, res) => {
-  const data = fs.readFileSync("/users.json",{encoding:'utf8'});
+  const data = fs.readFileSync("./users.json",{encoding:'utf8'});
   const obData = JSON.parse(data)
   res.status(200).json({ users: obData.users });
 });
