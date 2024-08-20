@@ -23,6 +23,8 @@ app.post("/users", (req, res) => {
   res.status(201).json({ user: newUser });
 });
 app.put("/users/:userId", (req, res) => {
+  const data = fs.readFileSync("./users.json",{encoding:'utf8'});
+  const {users} = JSON.parse(data);
   const findIndex = users.findIndex(
     (user) => user.id === parseInt(req.params.userId)
   );
