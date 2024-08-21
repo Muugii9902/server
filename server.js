@@ -30,18 +30,22 @@ app.put("/users/:userId", (req, res) => {
   );
   if (findIndex > -1) {
     users[findIndex].name = req.body.name;
-    res.status(200).json({ user: users[findIndex] });
+    fs.writeFileSync(".users.json",JSON.stringify({users}));
+    res.status(200).json({ user: users[findIndex],data:"" });
   } else {
     res.status(400).json({ message: "no" });
   }
 });
 app.delete("/users/:id", (req, res) => {
+  const data = fs.readFileSync("./users.json",{encoding:'utf8'});
+  const {users} = JSON.parse(data);
   const findIndex = users.findIndex(
     (user) => user.id === parseInt(req.params.id)
   );
   console.log("id", req.params.id);
   if (findIndex > -1) {
     const deletedUser = users.splice(findIndex, 1);
+    fs.writeFileSync(".users.json",JSON.stringify({users}));
     res.status(200).json({ user: deletedUser[0] });
   } else {
     res.status(400).json({ message: "not found " });
