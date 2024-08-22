@@ -15,7 +15,7 @@ app.post("/users", (req, res) => {
   const data = fs.readFileSync("./users.json", { encoding: "utf8" });
   const { employees } = JSON.parse(data);
   const newUser = {
-    id: `${employees.length + 1}`,
+    // id: `${employees.length + 1}`,
     ...req.body,
   };
   employees.push(newUser);
