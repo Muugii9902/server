@@ -1,1 +1,1 @@
-{"users":[{"id":"3","name":"muugii","age":43},{"id":"4","name":"uugii","age":43}]}
+{"employees":[{"id":"2","firstname":"Muugii","lastname":"Muugii","email":"changed","position":"dev","profileImg":"none"},{"id":"3","firstname":"Naraa","lastname":"Davaa","email":"naraa@gmail.com","position":"Developer","profileImg":"https://img.daisyui.com/images/profile/demo/2@94.webp"}]}
