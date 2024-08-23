@@ -1,1 +1,7 @@
-{"users":[{"id":"1","name":"bataa","age":20},{"id":"2","name":"bataa","age":20},{"id":"3","name":"muugii","age":43}]}
+{
+  "users": [
+    { "id": "1", "name": "bataa", "age": 20 },
+    { "id": "2", "name": "bataa", "age": 20 },
+    { "id": "3", "name": "muugii", "age": 43 }
+  ]
+}
